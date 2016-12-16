@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tipSlider.isHidden = true
+        customTipLabel.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,6 +48,13 @@ class ViewController: UIViewController {
      * When segmented control option is changed, recalculate tip
      */
     @IBAction func differentTip(_ sender: Any) {
+        if tipControl.selectedSegmentIndex == 3 {
+            tipSlider.isHidden = false
+            customTipLabel.isHidden = false
+        } else {
+            tipSlider.isHidden = true
+            customTipLabel.isHidden = true
+        }
         calculateTip()
     }
     
