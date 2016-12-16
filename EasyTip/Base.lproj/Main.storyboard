@@ -59,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="qAk-uV-4zL"/>
+                                    <action selector="billChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="iU3-Ka-Aws"/>
                                 </connections>
                             </textField>
                             <view contentMode="scaleToFill" misplaced="YES" id="wvf-eb-S2A">
@@ -75,6 +75,9 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="differentTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="mPR-pg-y83"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.02510318234317702" green="0.95401554404145084" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
