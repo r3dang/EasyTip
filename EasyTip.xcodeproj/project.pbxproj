@@ -14,6 +14,7 @@
 		547EA9121E02457D00628B68 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547EA9101E02457D00628B68 /* LaunchScreen.storyboard */; };
 		547EA91D1E02457D00628B68 /* EasyTipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EA91C1E02457D00628B68 /* EasyTipTests.swift */; };
 		547EA9281E02457D00628B68 /* EasyTipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EA9271E02457D00628B68 /* EasyTipUITests.swift */; };
+		547EEF4E1E0449A10095E7AF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EEF4D1E0449A10095E7AF /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		547EA9231E02457D00628B68 /* EasyTipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyTipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		547EA9271E02457D00628B68 /* EasyTipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyTipUITests.swift; sourceTree = "<group>"; };
 		547EA9291E02457D00628B68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		547EEF4D1E0449A10095E7AF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				547EA9071E02457D00628B68 /* AppDelegate.swift */,
 				547EA9091E02457D00628B68 /* ViewController.swift */,
 				547EA90B1E02457D00628B68 /* Main.storyboard */,
+				547EEF4D1E0449A10095E7AF /* SettingsViewController.swift */,
 				547EA90E1E02457D00628B68 /* Assets.xcassets */,
 				547EA9101E02457D00628B68 /* LaunchScreen.storyboard */,
 				547EA9131E02457D00628B68 /* Info.plist */,
@@ -261,6 +264,7 @@
 			files = (
 				547EA90A1E02457D00628B68 /* ViewController.swift in Sources */,
 				547EA9081E02457D00628B68 /* AppDelegate.swift in Sources */,
+				547EEF4E1E0449A10095E7AF /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +507,7 @@
 				547EA92E1E02457D00628B68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		547EA92F1E02457D00628B68 /* Build configuration list for PBXNativeTarget "EasyTipTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +516,7 @@
 				547EA9311E02457D00628B68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		547EA9321E02457D00628B68 /* Build configuration list for PBXNativeTarget "EasyTipUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +525,7 @@
 				547EA9341E02457D00628B68 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
