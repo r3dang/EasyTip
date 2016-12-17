@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         tipSlider.isHidden = true
         customTipLabel.isHidden = true
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -58,6 +58,9 @@ class ViewController: UIViewController {
         calculateTip()
     }
     
+    /**
+     * The custom option is selected in segementedControl
+     */
     @IBAction func customTipAmount(_ sender: Any) {
         customTipLabel.text = String(format: "%0.2f%%", tipSlider.value)
         calculateTip()
