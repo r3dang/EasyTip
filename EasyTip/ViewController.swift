@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "EasyTip"
         tipSlider.isHidden = true
         customTipLabel.isHidden = true
     }
@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func customTipAmount(_ sender: Any) {
-        customTipLabel.text = String(format: "%0.2f", tipSlider.value)
+        customTipLabel.text = String(format: "%0.2f%%", tipSlider.value)
         calculateTip()
     }
     
