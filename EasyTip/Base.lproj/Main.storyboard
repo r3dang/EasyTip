@@ -83,6 +83,19 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="t2A-M8-KOD">
+                                <rect key="frame" x="41" y="359" width="330" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="18%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="differentTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ibq-FR-cvl"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -100,7 +113,7 @@
                     <connections>
                         <outlet property="billField" destination="IW5-zb-6hH" id="Bf2-QE-Cff"/>
                         <outlet property="customTipLabel" destination="Lwc-hM-Luu" id="o28-AQ-qf7"/>
-                        <outlet property="tipControl" destination="oJa-ZG-WeB" id="SRq-np-pxJ"/>
+                        <outlet property="tipControl" destination="t2A-M8-KOD" id="21P-cy-Q0i"/>
                         <outlet property="tipLabel" destination="R3v-oH-7U4" id="9Oq-o8-jVK"/>
                         <outlet property="tipSlider" destination="BLt-tf-6xx" id="WHE-oz-v9L"/>
                         <outlet property="totalLabel" destination="bPq-PC-jOK" id="qhW-WW-hKI"/>
