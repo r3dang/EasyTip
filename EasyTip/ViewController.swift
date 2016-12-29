@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let defaults = UserDefaults.standard
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var billField: UITextField!
