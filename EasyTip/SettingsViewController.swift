@@ -33,7 +33,7 @@ class SettingsViewController: UIViewController {
         } else {
             settingsSlider.isHidden = true;
             settingsSliderLabel.isHidden = true;
-            defaults.set(percentages[settingsControl.selectedSegmentIndex], forKey: "defultTip")
+            defaults.set(percentages[settingsControl.selectedSegmentIndex], forKey: "defaultTip")
         }
     }
     
