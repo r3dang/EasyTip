@@ -143,8 +143,8 @@
                                 <color key="textColor" red="0.2198871872" green="0.203119199" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="highlightedColor" red="0.2198871872" green="0.203119199" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="oJa-ZG-WeB">
-                                <rect key="frame" x="22" y="121" width="330" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Qze-1r-kpB">
+                                <rect key="frame" x="22" y="141" width="337" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="18%"/>
@@ -153,13 +153,34 @@
                                     <segment title="Custom"/>
                                 </segments>
                                 <connections>
-                                    <action selector="differentTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="mPR-pg-y83"/>
+                                    <action selector="changedDefaultTip:" destination="7hA-9i-NH1" eventType="valueChanged" id="BTb-Ii-8YW"/>
                                 </connections>
                             </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="30" id="oly-e5-njQ">
+                                <rect key="frame" x="20" y="201" width="341" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.2198871872" green="0.203119199" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="settingsCustomChanged:" destination="7hA-9i-NH1" eventType="valueChanged" id="khU-xg-ynT"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7wj-Oy-qH2">
+                                <rect key="frame" x="140" y="239" width="100" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.2198871872" green="0.203119199" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="kgK-jq-EWZ"/>
+                    <connections>
+                        <outlet property="settingsControl" destination="Qze-1r-kpB" id="dKu-5O-xZx"/>
+                        <outlet property="settingsSlider" destination="oly-e5-njQ" id="hBJ-gT-3KT"/>
+                        <outlet property="settingsSliderLabel" destination="7wj-Oy-qH2" id="jUJ-2p-FdB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UES-3y-AlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

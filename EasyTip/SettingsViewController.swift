@@ -9,19 +9,39 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    let defaults = UserDefaults.standard
+    @IBOutlet weak var settingsControl: UISegmentedControl!
+    @IBOutlet weak var settingsSlider: UISlider!
+    @IBOutlet weak var settingsSliderLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        settingsSlider.isHidden = true;
+        settingsSliderLabel.isHidden = true;
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
+    @IBAction func changedDefaultTip(_ sender: Any) {
+        let percentages = [0.18, 0.2, 0.25]
+        if settingsControl.selectedSegmentIndex == 3 {
+            settingsSlider.isHidden = false;
+            settingsSliderLabel.isHidden = false;
+        } else {
+            settingsSlider.isHidden = true;
+            settingsSliderLabel.isHidden = true;
+            defaults.set(percentages[settingsControl.selectedSegmentIndex], forKey: "defultTip")
+        }
+    }
+    
+    @IBAction func settingsCustomChanged(_ sender: Any) {
+        settingsSliderLabel.text = String(format: "%0.2f%%", settingsSlider.value)
+        defaults.set(settingsSlider.value, forKey: "DefaultTip")
+    }
+    
     /*
     // MARK: - Navigation
 
