@@ -39,7 +39,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func settingsCustomChanged(_ sender: Any) {
         settingsSliderLabel.text = String(format: "%0.2f%%", settingsSlider.value)
-        defaults.set(settingsSlider.value, forKey: "DefaultTip")
+        defaults.set(settingsSlider.value, forKey: "defaultTip")
     }
     
     /*
