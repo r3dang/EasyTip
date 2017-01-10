@@ -17,6 +17,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         settingsControl.selectedSegmentIndex = defaults.integer(forKey: "segIndex")
+        settingsSlider.value = defaults.float(forKey: "defaultSlider")
+        settingsSliderLabel.text = String(format: "%0.2f%%", settingsSlider.value)
         if(settingsControl.selectedSegmentIndex != 3) {
             settingsSlider.isHidden = true;
             settingsSliderLabel.isHidden = true;
@@ -43,7 +45,7 @@ class SettingsViewController: UIViewController {
     
     @IBAction func settingsCustomChanged(_ sender: Any) {
         settingsSliderLabel.text = String(format: "%0.2f%%", settingsSlider.value)
-        defaults.set(settingsSlider.value, forKey: "defaultTip")
+        defaults.set(settingsSlider.value, forKey: "defaultSlider")
         defaults.synchronize()
     }
     

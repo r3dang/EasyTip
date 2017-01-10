@@ -20,10 +20,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "EasyTip"
-        tipSlider.isHidden = true
-        customTipLabel.isHidden = true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "segIndex")
+        print(defaults.integer(forKey: "segIndex"));
+        tipSlider.value = defaults.float(forKey: "defaultSlider")
+        customTipLabel.text = String(format: "%0.2f%%", tipSlider.value)
+        if(tipControl.selectedSegmentIndex != 3) {
+            tipSlider.isHidden = true
+            customTipLabel.isHidden = true
+        } else {
+            tipSlider.isHidden = false;
+            customTipLabel.isHidden = false;
+        }
+
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
