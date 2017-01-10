@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542049961E2599E100B83C00 /* dark_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 542049951E2599E100B83C00 /* dark_background.png */; };
+		542049981E259CF700B83C00 /* green_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 542049971E259CF700B83C00 /* green_background.png */; };
 		547EA9081E02457D00628B68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EA9071E02457D00628B68 /* AppDelegate.swift */; };
 		547EA90A1E02457D00628B68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547EA9091E02457D00628B68 /* ViewController.swift */; };
 		547EA90D1E02457D00628B68 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 547EA90B1E02457D00628B68 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		542049951E2599E100B83C00 /* dark_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dark_background.png; path = ../../../Downloads/dark_background.png; sourceTree = "<group>"; };
+		542049971E259CF700B83C00 /* green_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = green_background.png; path = ../../../Downloads/green_background.png; sourceTree = "<group>"; };
 		547EA9041E02457D00628B68 /* EasyTip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyTip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		547EA9071E02457D00628B68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		547EA9091E02457D00628B68 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,13 +80,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		542049941E25964200B83C00 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				542049951E2599E100B83C00 /* dark_background.png */,
+				542049971E259CF700B83C00 /* green_background.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		547EA8FB1E02457D00628B68 = {
 			isa = PBXGroup;
 			children = (
-				547EA9061E02457D00628B68 /* EasyTip */,
 				547EA91B1E02457D00628B68 /* EasyTipTests */,
 				547EA9261E02457D00628B68 /* EasyTipUITests */,
 				547EA9051E02457D00628B68 /* Products */,
+				547EA9061E02457D00628B68 /* EasyTip */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +114,12 @@
 			children = (
 				547EA9071E02457D00628B68 /* AppDelegate.swift */,
 				547EA9091E02457D00628B68 /* ViewController.swift */,
-				547EA90B1E02457D00628B68 /* Main.storyboard */,
 				547EEF4D1E0449A10095E7AF /* SettingsViewController.swift */,
 				547EA90E1E02457D00628B68 /* Assets.xcassets */,
 				547EA9101E02457D00628B68 /* LaunchScreen.storyboard */,
+				547EA90B1E02457D00628B68 /* Main.storyboard */,
 				547EA9131E02457D00628B68 /* Info.plist */,
+				542049941E25964200B83C00 /* Images */,
 			);
 			path = EasyTip;
 			sourceTree = "<group>";
@@ -239,6 +253,8 @@
 				547EA9121E02457D00628B68 /* LaunchScreen.storyboard in Resources */,
 				547EA90F1E02457D00628B68 /* Assets.xcassets in Resources */,
 				547EA90D1E02457D00628B68 /* Main.storyboard in Resources */,
+				542049961E2599E100B83C00 /* dark_background.png in Resources */,
+				542049981E259CF700B83C00 /* green_background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

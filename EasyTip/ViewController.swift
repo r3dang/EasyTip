@@ -20,7 +20,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipTextLabel: UILabel!
     @IBOutlet weak var totalTextLabel: UILabel!
     @IBOutlet weak var viewRectangle: UIView!
+    @IBOutlet weak var personStepper: UIStepper!
+    @IBOutlet weak var personLabel: UILabel!
+    @IBOutlet weak var darkImage: UIImageView!
+    @IBOutlet weak var personImage: UIImageView!
     
+    /*This function is called when the app starts*/
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "EasyTip"
@@ -41,6 +46,10 @@ class ViewController: UIViewController {
             tipSlider.thumbTintColor = UIColor.white
             tipSlider.maximumTrackTintColor = UIColor.white
             tipSlider.minimumTrackTintColor = UIColor.white
+            personImage.isHidden = true
+            darkImage.backgroundColor = UIColor.black
+            personLabel.textColor = UIColor.white
+            personStepper.tintColor = UIColor.white
         } else {
             self.view.backgroundColor = UIColor.green
             tipLabel.textColor = UIColor.blue
@@ -54,6 +63,10 @@ class ViewController: UIViewController {
             tipSlider.thumbTintColor = UIColor.white
             tipSlider.maximumTrackTintColor = UIColor.blue
             tipSlider.minimumTrackTintColor = UIColor.blue
+            darkImage.isHidden = true;
+            personImage.backgroundColor = UIColor.green
+            personLabel.textColor = UIColor.blue
+            personStepper.tintColor = UIColor.blue
         }
     }
     
@@ -86,6 +99,11 @@ class ViewController: UIViewController {
             tipSlider.thumbTintColor = UIColor.white
             tipSlider.maximumTrackTintColor = UIColor.white
             tipSlider.minimumTrackTintColor = UIColor.white
+            personImage.isHidden = true
+            darkImage.isHidden = false
+            darkImage.backgroundColor = UIColor.black
+            personLabel.textColor = UIColor.white
+            personStepper.tintColor = UIColor.white
         } else {
             self.view.backgroundColor = UIColor.green
             tipLabel.textColor = UIColor.blue
@@ -100,6 +118,11 @@ class ViewController: UIViewController {
             tipSlider.maximumTrackTintColor = UIColor.blue
             tipSlider.minimumTrackTintColor = UIColor.blue
             viewRectangle.backgroundColor = UIColor.blue
+            darkImage.isHidden = true
+            personImage.isHidden = false
+            personImage.backgroundColor = UIColor.green
+            personLabel.textColor = UIColor.blue
+            personStepper.tintColor = UIColor.blue
         }
     }
     override func didReceiveMemoryWarning() {
@@ -129,6 +152,20 @@ class ViewController: UIViewController {
         calculateTip()
         
     }
+    @IBAction func stepperValueChanged(_ sender: Any) {
+        if personStepper.value == 0 {
+            personStepper.value = 1
+        }
+        
+        var splitWays = Int(personStepper.value)
+        if personStepper.value == 0 {
+            personStepper.value = 1
+            splitWays = 1
+        }
+        
+        personLabel.text = "x" + String(splitWays)
+        calculateTip()
+    }
     
     /**
      * When segmented control option is changed, recalculate tip
@@ -156,16 +193,19 @@ class ViewController: UIViewController {
      * main driver function which dynamically calculates tip
      */
     func calculateTip() {
+        if personStepper.value == 0 {
+            personStepper.value = 1
+        }
         let percentages = [0.18, 0.20, 0.25]
         let bill = Double(billField.text!) ?? 0
         var tip = 0.0
         if tipControl.selectedSegmentIndex == 3 {
-            tip = bill * Double(tipSlider.value/100)
+            tip = (bill * Double(tipSlider.value/100))/personStepper.value
         } else {
-            tip = bill * percentages[tipControl.selectedSegmentIndex]
+            tip = (bill * percentages[tipControl.selectedSegmentIndex])/personStepper.value
         }
             
-        let total = bill + tip
+        let total = (bill + tip)/personStepper.value
         tipLabel.text = String(format: "$%0.2f", tip)
         totalLabel.text = String(format: "$%0.2f", total)
     }
