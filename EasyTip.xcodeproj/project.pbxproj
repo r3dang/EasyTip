@@ -196,6 +196,7 @@
 				TargetAttributes = {
 					547EA9031E02457D00628B68 = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = FCZG42SK2D;
 						ProvisioningStyle = Automatic;
 					};
 					547EA9171E02457D00628B68 = {
@@ -414,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FCZG42SK2D;
 				INFOPLIST_FILE = EasyTip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.EasyTip;
@@ -426,6 +428,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FCZG42SK2D;
 				INFOPLIST_FILE = EasyTip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codepath.EasyTip;
