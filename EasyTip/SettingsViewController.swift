@@ -16,8 +16,11 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingsSlider.isHidden = true;
-        settingsSliderLabel.isHidden = true;
+        settingsControl.selectedSegmentIndex = defaults.integer(forKey: "segIndex")
+        if(settingsControl.selectedSegmentIndex != 3) {
+            settingsSlider.isHidden = true;
+            settingsSliderLabel.isHidden = true;
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,20 +29,22 @@ class SettingsViewController: UIViewController {
     
 
     @IBAction func changedDefaultTip(_ sender: Any) {
-        let percentages = [0.18, 0.2, 0.25]
         if settingsControl.selectedSegmentIndex == 3 {
             settingsSlider.isHidden = false;
             settingsSliderLabel.isHidden = false;
         } else {
             settingsSlider.isHidden = true;
             settingsSliderLabel.isHidden = true;
-            defaults.set(percentages[settingsControl.selectedSegmentIndex], forKey: "defaultTip")
         }
+        
+        defaults.set(settingsControl.selectedSegmentIndex, forKey: "segIndex")
+        defaults.synchronize()
     }
     
     @IBAction func settingsCustomChanged(_ sender: Any) {
         settingsSliderLabel.text = String(format: "%0.2f%%", settingsSlider.value)
         defaults.set(settingsSlider.value, forKey: "defaultTip")
+        defaults.synchronize()
     }
     
     /*
