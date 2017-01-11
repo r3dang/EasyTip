@@ -153,6 +153,7 @@ class ViewController: UIViewController {
         if (tipControl.selectedSegmentIndex == 3 && motion == .motionShake) {
             tipSlider.value = Float(drand48()*29 + 1)
             customTipLabel.text = String(format: "%0.2f%%", tipSlider.value)
+            calculateTip()
         }
         
     }
@@ -178,6 +179,7 @@ class ViewController: UIViewController {
         personLabel.text = "x" + String(splitWays)
         defaults.set(splitWays, forKey: "splitWays");
         calculateTip()
+        defaults.synchronize()
     }
     
     /**
@@ -225,6 +227,7 @@ class ViewController: UIViewController {
         let total = (bill + tip)/personStepper.value
         tipLabel.text = String(format: "$%0.2f", tip)
         totalLabel.text = String(format: "$%0.2f", total)
+        defaults.synchronize()
     }
     
 }

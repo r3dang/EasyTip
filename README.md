@@ -21,9 +21,10 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
-
-* []
+* [Yes] In Custom, user can shake device and get a random tip percentage.
+* [Yes] If, the user is in a party, then the user can split the bill with as many people as he wants to via the splitter functionality.
+* [Yes] User can give a custom tip percent ranging from 1% to 30% via the slider that appears when user chooses the custom option.
+* [Yes] User can choose a dark theme if he is eating out in the morning.
 
 ## Video Walkthrough 
 
@@ -39,7 +40,7 @@ Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Rajit Dang]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
