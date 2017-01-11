@@ -13,19 +13,18 @@ The following **required** functionality is complete:
 * [Yes] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [Yes] Settings page to change the default tip percentage.
-* [No] UI animations
-* [Yes] Remembering the bill amount across app restarts (if <60mins)
-* [No] Using locale-specific currency and currency thousands separators.
-* [Yes] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [X] Settings page to change the default tip percentage.
+* [ ] UI animations
+* [X] Remembering the bill amount across app restarts (if <60mins)
+* [ ] Using locale-specific currency and currency thousands separators.
+* [X] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-* [Yes] In Custom, user can shake device and get a random tip percentage.
-* [Yes] If, the user is in a party, then the user can split the bill with as many people as he wants to via the splitter functionality.
-* [Yes] User can give a custom tip percent ranging from 1% to 30% via the slider that appears when user chooses the custom option.
-* [Yes] User can choose a dark theme if he is eating out in the morning.
-
+* [X] In Custom, user can shake his phone and get a random tip percentage
+* [X] Using UISplitter, user can get tip and total amounts and split bill with as many people as the user wishes to.
+* [X] User can give a custom tip percent ranging from 1% to 30% via the slider that appears when user chooses the custom option.
+* [X] A dark theme is avaiable for enhanced UX.
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
@@ -35,9 +34,7 @@ Here's a walkthrough of implemented user stories:
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-
-Describe any challenges encountered while building the app.
-
+Didn't encounter a lot of challenges during implementation. However, I did face a few challenges when I tried to implement bill amount remembering. In conclusion, this project was a lot of fun and gave me a glimpse of the potential of iOS Devlopment via swift.
 ## License
 
     Copyright [2017] [Rajit Dang]
