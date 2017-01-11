@@ -25,6 +25,7 @@ The following **additional** features are implemented:
 * [X] Using UISplitter, user can get tip and total amounts and split bill with as many people as the user wishes to.
 * [X] User can give a custom tip percent ranging from 1% to 30% via the slider that appears when user chooses the custom option.
 * [X] A dark theme is avaiable for enhanced UX.
+
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
