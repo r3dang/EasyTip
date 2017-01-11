@@ -31,7 +31,6 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/re1ylqg.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 Didn't encounter a lot of challenges during implementation. However, I did face a few challenges when I tried to implement bill amount remembering. In conclusion, this project was a lot of fun and gave me a glimpse of the potential of iOS Devlopment via swift.
