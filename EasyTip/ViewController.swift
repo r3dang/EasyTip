@@ -68,6 +68,17 @@ class ViewController: UIViewController {
             personLabel.textColor = UIColor.blue
             personStepper.tintColor = UIColor.blue
         }
+        
+        let lastSessionTime = defaults.integer(forKey: "lastCalculationTime")
+        let currentTimestamp = Int(NSDate().timeIntervalSince1970);
+        if(currentTimestamp - lastSessionTime < 3600) { // persist across restarts for 1 hour
+            let billSubtotal = defaults.double(forKey: "recentBillAmount")
+            if(billSubtotal >= 0.0) {
+                billField.text = String(billSubtotal);
+                calculateTip()
+                
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -152,6 +163,7 @@ class ViewController: UIViewController {
         calculateTip()
         
     }
+    
     @IBAction func stepperValueChanged(_ sender: Any) {
         if personStepper.value == 0 {
             personStepper.value = 1
@@ -164,6 +176,7 @@ class ViewController: UIViewController {
         }
         
         personLabel.text = "x" + String(splitWays)
+        defaults.set(splitWays, forKey: "splitWays");
         calculateTip()
     }
     
@@ -193,18 +206,22 @@ class ViewController: UIViewController {
      * main driver function which dynamically calculates tip
      */
     func calculateTip() {
+        let currentTimestamp = Int(NSDate().timeIntervalSince1970)
+        defaults.set(currentTimestamp, forKey: "lastCalculationTime")
+        
         if personStepper.value == 0 {
             personStepper.value = 1
         }
         let percentages = [0.18, 0.20, 0.25]
         let bill = Double(billField.text!) ?? 0
+        defaults.set(bill, forKey: "recentBillAmount")
         var tip = 0.0
         if tipControl.selectedSegmentIndex == 3 {
             tip = (bill * Double(tipSlider.value/100))/personStepper.value
         } else {
             tip = (bill * percentages[tipControl.selectedSegmentIndex])/personStepper.value
         }
-            
+        
         let total = (bill + tip)/personStepper.value
         tipLabel.text = String(format: "$%0.2f", tip)
         totalLabel.text = String(format: "$%0.2f", total)

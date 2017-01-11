@@ -54,6 +54,9 @@ class SettingsViewController: UIViewController {
             settingsSlider.maximumTrackTintColor = UIColor.blue
             settingsSlider.minimumTrackTintColor = UIColor.blue
         }
+        
+        //Restore last session
+        
     }
 
     override func didReceiveMemoryWarning() {
